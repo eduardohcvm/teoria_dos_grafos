@@ -30,5 +30,9 @@ public class Aresta {
     public boolean verificaAresta(Aresta aresta, Vertice verticeIN, Vertice verticeOUT){
         return aresta.destino == verticeOUT && aresta.origem == verticeIN;
     }
-
+    public Aresta(String nom){
+        nome = nom;
+        origem = null;
+        destino = null;
+    }
 }

@@ -41,6 +41,18 @@ public class Grafos {
     public List<Vertice> getVertices(){
         return vertices;
     }
+    public List<Aresta> getArestas(){
+        return arestas;
+    }
+
+    public Vertice getVerticePorNome(String nome){
+        for(Vertice vec : vertices){
+            if (nome == vec.getNome()){
+                return vec;
+            }
+        }
+        return null;
+    }
 
     public Grafos(){
         this.vertices = new ArrayList<>();
