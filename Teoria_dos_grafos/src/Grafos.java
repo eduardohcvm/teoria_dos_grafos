@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 public class Grafos {
     private List<Aresta> arestas;
@@ -35,6 +35,16 @@ public class Grafos {
 
     public void setOrdem(int ordem) {
         this.ordem = ordem;
+    }
+
+
+    public List<Vertice> getVertices(){
+        return vertices;
+    }
+
+    public Grafos(){
+        this.vertices = new ArrayList<>();
+        this.arestas = new ArrayList<>();
     }
 
 

@@ -26,4 +26,9 @@ public class Aresta {
     public void setDestino(Vertice destino) {
         this.destino = destino;
     }
+
+    public boolean verificaAresta(Aresta aresta, Vertice verticeIN, Vertice verticeOUT){
+        return aresta.destino == verticeOUT && aresta.origem == verticeIN;
+    }
+
 }

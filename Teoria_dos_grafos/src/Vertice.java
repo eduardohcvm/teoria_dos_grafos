@@ -44,4 +44,11 @@ public class Vertice {
     public void setArestasOut(int arestasOut) {
         this.arestasOut = arestasOut;
     }
+    Vertice(){
+        this.setNome("0");
+        this.setArestasIn(0);
+        this.setGrau(0);
+        this.setDirecionado(true);
+        this.setArestasOut(0);
+    }
 }
