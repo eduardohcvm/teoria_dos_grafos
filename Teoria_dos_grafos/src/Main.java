@@ -15,6 +15,7 @@ public class Main {
         DefinirVertices(grafo);
         DefinirArestas(grafo);
 
+
     }
 
     public static void DefinirVertices(Grafos grafo) {
@@ -45,14 +46,14 @@ public class Main {
         a1.setOrigem(grafo.getVerticePorNome("2"));
         a1.setDestino(grafo.getVerticePorNome("1"));
         Aresta a2 = new Aresta("a2");
-        a1.setOrigem(grafo.getVerticePorNome("4"));
-        a1.setDestino(grafo.getVerticePorNome("2"));
+        a2.setOrigem(grafo.getVerticePorNome("4"));
+        a2.setDestino(grafo.getVerticePorNome("2"));
         Aresta a3 = new Aresta("a3");
-        a1.setOrigem(grafo.getVerticePorNome("1"));
-        a1.setDestino(grafo.getVerticePorNome("3"));
+        a3.setOrigem(grafo.getVerticePorNome("1"));
+        a3.setDestino(grafo.getVerticePorNome("3"));
         Aresta a4 = new Aresta("a4");
-        a1.setOrigem(grafo.getVerticePorNome("4"));
-        a1.setDestino(grafo.getVerticePorNome("5"));
+        a4.setOrigem(grafo.getVerticePorNome("4"));
+        a4.setDestino(grafo.getVerticePorNome("5"));
 
         for (Aresta aresta : Arrays.asList(a1, a2, a3, a4)) {
             grafo.adicionarAresta(aresta);

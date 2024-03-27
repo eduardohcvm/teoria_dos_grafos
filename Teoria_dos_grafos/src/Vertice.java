@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Vertice {
     private String nome;
     private int grau;
@@ -15,6 +18,15 @@ public class Vertice {
 
     public int getGrau() {
         return grau;
+    }
+    public List<Aresta> getArestasSaindo(List<Aresta> todasArestas) {
+        List<Aresta> arestasSaindo = new ArrayList<>();
+        for (Aresta aresta : todasArestas) {
+            if (aresta.getOrigem().equals(this)) {
+                arestasSaindo.add(aresta);
+            }
+        }
+        return arestasSaindo;
     }
 
     public void setGrau(int grau) {

@@ -15,6 +15,8 @@ public class Aresta {
         return origem;
     }
 
+
+
     public void setOrigem(Vertice origem) {
         this.origem = origem;
     }
