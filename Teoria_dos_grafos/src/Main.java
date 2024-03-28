@@ -14,7 +14,13 @@ public class Main {
 
         DefinirVertices(grafo);
         DefinirArestas(grafo);
-
+        for (Aresta aresta1 : grafo.getArestas()){
+            for (Aresta aresta2 : grafo.getArestas()){
+                if (aresta1.getDestino() == aresta2.getOrigem() && aresta1.getOrigem() == aresta2.getDestino()){
+                    System.out.println("Grafo é direcionado");
+                }
+            }
+        }
 
     }
 
@@ -50,7 +56,7 @@ public class Main {
         a2.setDestino(grafo.getVerticePorNome("2"));
         Aresta a3 = new Aresta("a3");
         a3.setOrigem(grafo.getVerticePorNome("1"));
-        a3.setDestino(grafo.getVerticePorNome("3"));
+        a3.setDestino(grafo.getVerticePorNome("2"));
         Aresta a4 = new Aresta("a4");
         a4.setOrigem(grafo.getVerticePorNome("4"));
         a4.setDestino(grafo.getVerticePorNome("5"));

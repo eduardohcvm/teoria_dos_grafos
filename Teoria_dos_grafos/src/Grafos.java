@@ -59,39 +59,5 @@ public class Grafos {
         this.arestas = new ArrayList<>();
     }
 
-    public static boolean temLoop(Grafos grafo) {
-        Set<Vertice> visitados = new HashSet<>();
-        Set<Vertice> pilha = new HashSet<>();
-
-        for (Vertice vertice : grafo.getVertices()) {
-            if (dfs(vertice, visitados, pilha)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-    private static boolean dfs(Vertice vertice, Set<Vertice> visitados, Set<Vertice> pilha) {
-        if (pilha.contains(vertice)) {
-            return true; // Ciclo encontrado
-        }
-
-        if (visitados.contains(vertice)) {
-            return false; // Vértice já visitado e sem ciclo
-        }
-
-        visitados.add(vertice);
-        pilha.add(vertice);
-
-        for (Aresta aresta : vertice.getArestasSaindo()) {
-            if (dfs(aresta.getDestino(), visitados, pilha)) {
-                return true;
-            }
-        }
-
-        pilha.remove(vertice);
-
-        return false;
-    }
 
 }
