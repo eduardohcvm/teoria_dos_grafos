@@ -1,6 +1,10 @@
+package app;
+
+import app.Aresta;
+import app.Grafos;
+
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -14,6 +18,7 @@ public class Main {
 
         DefinirVertices(grafo);
         DefinirArestas(grafo);
+        System.out.println(grafo);
         for (Aresta aresta1 : grafo.getArestas()){
             for (Aresta aresta2 : grafo.getArestas()){
                 if (aresta1.getDestino() == aresta2.getOrigem() && aresta1.getOrigem() == aresta2.getDestino()){
@@ -41,9 +46,6 @@ public class Main {
             grafo.adicionarVertice(vertice);
         }
 
-        for (Vertice vertice : grafo.getVertices()) {
-            System.out.println( vertice.getNome());
-        }
 
     }
 
@@ -56,7 +58,7 @@ public class Main {
         a2.setDestino(grafo.getVerticePorNome("2"));
         Aresta a3 = new Aresta("a3");
         a3.setOrigem(grafo.getVerticePorNome("1"));
-        a3.setDestino(grafo.getVerticePorNome("2"));
+        a3.setDestino(grafo.getVerticePorNome("3"));
         Aresta a4 = new Aresta("a4");
         a4.setOrigem(grafo.getVerticePorNome("4"));
         a4.setDestino(grafo.getVerticePorNome("5"));
@@ -64,11 +66,7 @@ public class Main {
         for (Aresta aresta : Arrays.asList(a1, a2, a3, a4)) {
             grafo.adicionarAresta(aresta);
         }
-        for (Aresta aresta : grafo.getArestas()){
-            System.out.println(aresta.getNome());
-            System.out.println(aresta.getOrigem());
-            System.out.println(aresta.getDestino());
-        }
+
     }
 
 }
